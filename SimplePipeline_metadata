@@ -1,0 +1,15 @@
+{
+  "name": "SimplePipeline",
+  "description": "A Simple Pipeline to upload data to BigQuery from CSV files.",
+  "parameters": [{
+    "name": "inputFile",
+    "label": "Input of Cloud Storage File",
+    "help_text": "Provide a location of a CSV file with ID, DESCRIPTION, PRICE columns without the header. ex: gs://my-project/csv/products.csv",
+    "regexes": ["^gs:\/\/[^\n\r]+$"]
+  },
+  {
+    "name": "output",
+    "label": "BigQuery Output Table Name",
+    "help_text": "BigQuery table full path. ex: my-project:my_data_set.my_table"
+  }]
+}
